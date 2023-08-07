@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blinking Text Field Outline</title>
+  <style>
+    /* Create a CSS animation for blinking */
+    @keyframes blink {
+      100% { outline-color: red; }
+      100% { outline-color: blue; }
+      100% { outline-color: green; }
+	 
+    }
+
+    /* Apply the animation to the input field with the class "blinking" */
+    .blinking {
+      animation: blink 1s infinite;
+    }
+
+    /* Additional styles for the input field */
+    input {
+      padding: 10px;
+      font-size: 16px;
+      outline: 5px solid transparent;
+      transition: outline-color 0.80s ease-in-out;
+    }
+
+    input:focus {
+      outline-color: black; /* Set an initial outline color when the input is focused */
+    }
+  </style>
+</head>
+<body>
+  <label for="textfield">Type something:</label>
+  <input type="text" id="textfield" class="blinking">
+</body>
+</html>
